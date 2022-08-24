@@ -3,6 +3,9 @@
 #include <string>
 namespace model {
 	class employee {
+		employee() = default;
+		employee(int login,std::string name,std::string surname,std::string patronymic,int num_passport):login_(login),name_(name),surname_(surname),
+			patronymic_(patronymic),num_passport_(num_passport){}
 	public:
 		void set_name(std::string name) {
 			name_ = name;
@@ -31,20 +34,22 @@ namespace model {
 		int get_num_passport() {
 			return num_passport_;
 		}
+		void set_login(int login) {
+			login_= login;
+		}
+		int get_login() {
+			return login_;
+		}
 
 
 	private:
 		std::string name_;
 		std::string surname_;
 		std::string patronymic_;
+		int login_;
 		int num_passport_;
 
 	};
 
-	class emloyee1 :public employee {
-	public:
-
-
-
-	};
+	
 }

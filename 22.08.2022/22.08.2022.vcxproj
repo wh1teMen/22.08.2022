@@ -42,7 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -132,11 +132,15 @@
     <ClCompile Include="check.cpp" />
     <ClCompile Include="employee.cpp" />
     <ClCompile Include="Product.cpp" />
+    <ClCompile Include="Stock.cpp" />
+    <ClCompile Include="Trading_position.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="check.h" />
     <ClInclude Include="employee.h" />
     <ClInclude Include="Product.h" />
+    <ClInclude Include="Stock.h" />
+    <ClInclude Include="Trading_position.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
