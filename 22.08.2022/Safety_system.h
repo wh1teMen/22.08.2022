@@ -5,10 +5,15 @@ namespace model {
 	class Safety_system
 	{
 	public:
-		void set_employee(employee &other) {
+		void add_employee(employee &other) {
 			data_employee.emplace_back(other);
 		}
-		//void set_employee_add()
+		bool find_login(int login) {
+			for (auto it : data_employee) 
+				if (it.get_login() == login)
+					return true;
+					return false;
+		}
 
 
 
