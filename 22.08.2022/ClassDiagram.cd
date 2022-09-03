@@ -1,31 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Product">
-    <Position X="3.75" Y="0.5" Width="1.5" />
+  <Class Name="model::check">
+    <Position X="11.25" Y="3.25" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAADAAAgAAACAAAAAAAAAAgAAAABAAAAAAgAAAAAIAA=</HashCode>
+      <HashCode>AAAAAggAAAAIAAAAAAAACIAAACAAAABAAACAAAAgAAA=</HashCode>
+      <FileName>check.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="model::employee">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AABEAAAAAAAAAAAgAAAIBAQAAABAAAAAgAAICIAAMFQ=</HashCode>
+      <FileName>employee.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="model::Product">
+    <Position X="4.75" Y="3.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAMgAAAAAAAAAAIAAAAAEAAAAACAAAAQAAEAAAE=</HashCode>
       <FileName>Product.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="employee">
-    <Position X="1.25" Y="0.5" Width="1.5" />
+  <Class Name="model::Safety_system">
+    <Position X="4.25" Y="0.5" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AABEAAAAAAAAAAAgAAAABAQAAABAAAAAAAAACIAAIFQ=</HashCode>
-      <FileName>employee.h</FileName>
+      <HashCode>AAAAAAAACAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Safety_system.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="emloyee1">
-    <Position X="1.25" Y="4.75" Width="1.5" />
+  <Class Name="model::Stock">
+    <Position X="9" Y="0.5" Width="3.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>employee.h</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgCAAAAAAAAiAAAAICAA=</HashCode>
+      <FileName>Stock.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="check">
-    <Position X="5.75" Y="0.5" Width="1.5" />
+  <Class Name="model::Trading_position">
+    <Position X="8" Y="3.25" Width="3" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>check.h</FileName>
+      <HashCode>AAAAAABAQEgAABABAAAAAgAQAAAChAAAAAAAAAAARAA=</HashCode>
+      <FileName>Trading_position.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
