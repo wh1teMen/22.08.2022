@@ -16,10 +16,11 @@ public:
 	}
 	
 	check() = default;
-	check(std::string time,std::string counterparty):time_(time),counterparty_(counterparty){}
+	check(std::string time,std::string counterparty):time_(time),counterparty_(counterparty) {}
 
 	//добавить позицию в чек
-	void Trading_position_add(Trading_position &other) {
+	void Trading_position_add(Trading_position &other,int volume) {
+		other.set_amount(volume);
 		Check.emplace_back(other);
 	}
 	//удалить чек
@@ -40,12 +41,17 @@ public:
 	std::string  get_counterparty() {
 		return counterparty_;
 	}
+	
 	void show_check(Trading_position&other) {
 		std::cout <<"\nНазвание:\t"<< other.get_product() << "\nКоличество:\t" << other.get_amount() <<
 			"\nЦена доставки:\t" << other.get_delivery_price() << "\n"<<"Время:\t\t"<<check::get_time()<<"\n"
 			<<"Контрагент:\t"<<check::get_counterparty()<<std::endl;
 
 	}
+
+
+
+
 	int payment(Trading_position& other) {
 		
 		  int amount = other.get_amount();
@@ -53,6 +59,28 @@ public:
 	
 			
 	}
+	int get_size() {
+		return Check.size();
+		
+	}
+	std::string get_name_check() {
+		std::string name_;
+		for (auto& el : Check) {
+			name_=el.get_product();
+		}
+		return name_;
+	}
+	int get_amount_check() {
+		int amount_;
+		for (auto& el : Check) {
+			if (get_name_check() == el.get_product()) {
+				amount_ = el.get_amount();
+				
+			}
+		}
+		return amount_;
+	}
+	
 	
 
 private:

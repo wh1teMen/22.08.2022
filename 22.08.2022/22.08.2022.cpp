@@ -32,7 +32,7 @@ int main()
     /*********************************************************************************************/
 
     //создаем обект торговой позиции
-    Trading_position flowers("flowers", 70, 12, 43);//(тип продукта,количество,срок реализации,цена доставки)
+    Trading_position flowers("flowers", 70, 12, 43);
     Trading_position toy("toy", 100, 90, 3500);
 
     //создаем продукт
@@ -52,13 +52,19 @@ int main()
 
     check check1("13:00", "газпром");
     //добавить в чек, объект торговой позиции цветы
-    check1.Trading_position_add(flowers);
+    check1.Trading_position_add(flowers,15);
     //вывод чека
     check1.show_check(flowers);
-    
+    std::cout << std::endl;
+   stock_1.position_update(check1);
+   std::cout << std::endl;
+   std::cout<<check1.get_amount_check();
+   std::cout << check1.get_name_check();
+   stock_1.Trading_position_change_amount(flowers,check1.get_amount_check());
+  
+
+  
     stock_1.show_stock();//вывод содержимого склада
-
-
 
 
 

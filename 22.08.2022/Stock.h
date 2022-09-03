@@ -1,6 +1,6 @@
 #pragma once
 #include"Trading_position.h"
-//#include"check"
+#include"check.h"
 #include<vector>
 namespace model {
 	//Класс Склад
@@ -38,17 +38,19 @@ namespace model {
 				std::cout << el.get_product()<<" " << el.get_amount() <<" шт"<< std::endl;
 			}
 		}
+		
 
-		/*void position_update(check&other) {
-			
-				
-			
-			
-			
-			
+		void position_update(check&other) {
+			for (auto& el:Stock) {
+				if (el.get_product() == other[0].get_product()) {
+					//el.get_amount() -= other[0].get_amount();
+				}
 
+			}
+			//std::cout<<other[0].get_amount();
 
-		}*/
+			
+		}
 		
 
 
