@@ -50,21 +50,29 @@ int main()
     stock_1.show_stock();//вывод содержимого склада
     /*********************************************************************************************/
 
-    check check1("13:00", "газпром");
+    check check1("13:00", "газпром",flowers);
+    check check2("13:00", "Лукойл", toy);
     //добавить в чек, объект торговой позиции цветы
-    check1.Trading_position_add(flowers,15);
+
+    check1.Trading_position_add(flowers,90);
+    check2.Trading_position_add(toy, 65);
     //вывод чека
     check1.show_check(flowers);
+    check2.show_check(toy);
     std::cout << std::endl;
-   stock_1.position_update(check1);
-   std::cout << std::endl;
-   std::cout<<check1.get_amount_check();
-   std::cout << check1.get_name_check();
-   stock_1.Trading_position_change_amount(flowers,check1.get_amount_check());
-  
+    //убирает позиции
+    try {
+        stock_1.position_update(check1);
+        stock_1.position_update(check2);
+    }
+    catch (const std::exception& ex) {
+        std::cout << ex.what() << std::endl;
+    }
 
-  
-    stock_1.show_stock();//вывод содержимого склада
+
+
+
+   stock_1.show_stock();//вывод содержимого склада
 
 
 

@@ -14,9 +14,13 @@ public:
 	Trading_position operator [](int i) {
 		return Check[i];
 	}
+	Trading_position operator <<(std::ostream& out);
+		
+	
+	
 	
 	check() = default;
-	check(std::string time,std::string counterparty):time_(time),counterparty_(counterparty) {}
+	check(std::string time,std::string counterparty,Trading_position):time_(time),counterparty_(counterparty) {}
 
 	//добавить позицию в чек
 	void Trading_position_add(Trading_position &other,int volume) {
@@ -88,6 +92,7 @@ private:
 	std::string time_;
 	std::string counterparty_;
 	std::vector<Trading_position>Check;
+	std::vector<Trading_position>pos;
 	};
 
 }

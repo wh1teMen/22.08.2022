@@ -20,7 +20,7 @@ namespace model {
 			other.set_product(new_product);
 		}
 		//принимает торговую объект торговой позиции и новое значение(количество)-->меняет количество 
-		void Trading_position_change_amount(Trading_position &other, int new_amount) {
+		void Trading_position_change_amount(Trading_position& other, int new_amount) {
 			other.set_amount(new_amount);
 		}
 		//пинимает торговую объект торговой позиции и новое значение(срок реализации)-->меняет срок реализации
@@ -37,19 +37,32 @@ namespace model {
 			for (auto& el :Stock) {
 				std::cout << el.get_product()<<" " << el.get_amount() <<" шт"<< std::endl;
 			}
-		}
+		}///патерн сотсояния для коненого автомата
 		
 
 		void position_update(check&other) {
 			for (auto& el:Stock) {
-				if (el.get_product() == other[0].get_product()) {
-					//el.get_amount() -= other[0].get_amount();
-				}
-
+				
+					if (el.get_product() == other.get_name_check()) {
+						
+						if(el.get_amount() <other.get_amount_check()) {
+							
+							std::string a ="!!!ОШИБКА!!!-->Товара: "+ el.get_product() + " не хватает для реализации";
+							throw std::exception( a.c_str());
+							
+						}
+						el.set_amount(el.get_amount() - other.get_amount_check());
+					}
+					
+				
+				
+				
+					
+				
+				
+				
 			}
-			//std::cout<<other[0].get_amount();
-
-			
+						
 		}
 		
 
