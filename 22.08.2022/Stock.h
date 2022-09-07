@@ -12,8 +12,15 @@ namespace model {
 			Stock.emplace_back(other);
 		}
 		//удалить торговую позицию
-		void Trading_position_delete(Trading_position &other) {
-			Stock.clear();
+		void Trading_position_delete(const Trading_position &other) {
+			auto it = std::find_if(Stock.begin(), Stock.end(), [other](const Trading_position &tmp) {
+				return other.get_product() == tmp.get_product();
+				}
+			);
+			if (it != Stock.end()) {
+				Stock.erase(it);
+
+			}
 		}
 		//принимает торговую объект торговой позиции и новое значение(тип продукта)-->меняет тип продукта
 		void Trading_position_change_product(Trading_position &other, std::string new_product) {

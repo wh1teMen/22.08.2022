@@ -11,6 +11,10 @@ namespace model {
 				obj.delivery_price_ << ' '; 
 			return out;
 		}
+		bool operator ==(const  Trading_position &other) {
+			return this->product_ == other.product_ && this->amount_ == other.amount_ && this->implementation_period_ == other.implementation_period_ && this->delivery_price_ == other.delivery_price_;
+
+		}
 		Trading_position() = default;
 		//конструктор (тип продукта,количество,срок реализации,цена доставки)
 		Trading_position(std::string product, int amount, int implementation_period, int delivery_price) :
@@ -21,7 +25,7 @@ namespace model {
 			product_ = product;
 		}
 		//возвращает тип родукта
-		std::string get_product() {
+		std::string get_product()const {
 			return product_;
 		}
 		//добавление количества продукта

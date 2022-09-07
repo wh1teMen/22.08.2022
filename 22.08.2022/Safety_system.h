@@ -7,6 +7,7 @@ namespace model {
 	class Safety_system
 	{
 	public:
+
 		//добавляет нового работника
 		void add_employee(employee &other) {
 			data_employee.emplace_back(other);
